@@ -1,0 +1,154 @@
+/* Login Wrapper CSS */
+.login-wrapper {
+  margin: 50px auto 0;
+  width: 488px;
+  background: #ffffff;
+  border-top: #3ac7ec solid 3px;
+  border-radius: 2px;
+}
+
+/* Form CSS */
+form > * {
+  margin: 30px;
+}
+
+/* Login Title */
+.form-title {
+  display: flex;
+  align-items: center;
+}
+
+.form-title > div {
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.form-title > img {
+  transform: rotate(270deg);
+}
+
+/* Radio CSS */
+.radio {
+  /* margin: 32px; */
+  display: flex;
+  align-items: center;
+}
+
+.radio > input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: #1f7a54 solid 2px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.radio > input[type="radio"]:checked {
+  background: radial-gradient(#1f7a54 50%, transparent 50%, transparent);
+  color: #1f7a54;
+}
+
+.radio > label {
+  margin-right: 32px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*
+For State and District 
+Input Select  CSS
+*/
+.select-title {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.input-select {
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  appearance: none;
+  background-image: url("/assets/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  color: #222222;
+  border-bottom: #e0e1e1 solid 1px;
+}
+
+/* Common CSS for Forgot Pass and UN */
+.forgot {
+  font-family: "Quicksand";
+  font-size: 12px;
+  font-weight: 600;
+  color: #227c56;
+  text-align: right;
+}
+
+/* Username CSS */
+.username {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: #e0e1e1 solid 1px;
+  font-family: "Quicksand";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Password CSS */
+.pass {
+  display: flex;
+  border-bottom: #e0e1e1 solid 1px;
+}
+
+.password {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Quicksand";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Remember Me Checkbox CSS*/
+
+/* Remember me wrapper */
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.checkbox-holder {
+  background-image: url("/assets/icons/checkbox-unchecked.svg");
+  width: 22px;
+  height: 22px;
+  margin-right: 3px;
+}
+
+.checkbox:checked + .checkbox-holder {
+  background-image: url("/assets/icons/checkbox-checked.svg");
+}
+
+.cb-label {
+  font-weight: 600;
+}
+
+/* Submit Button CSS */
+form > .submit-button {
+  appearance: none;
+  border: none;
+  width: 215px;
+  height: 40px;
+  background: #3fd28b;
+  align-self: center;
+  margin: 0 136px 30px;
+  border-radius: 2px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 61, 0.2);
+}

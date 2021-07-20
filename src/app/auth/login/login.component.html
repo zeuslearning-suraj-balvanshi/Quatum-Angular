@@ -1,0 +1,94 @@
+<div class="login-wrapper">
+  <form #loginForm="ngForm" (ngSubmit)="getValues(loginForm.value)">
+    <!-- form title -->
+    <div class="form-title">
+      <img src="../../../assets/icons/sort.svg" alt="Go Back" />
+      <div class="text">Log in with Quantum</div>
+    </div>
+    <!-- radio button section -->
+    <div class="radio">
+      <!-- district-->
+      <input
+        ngModel
+        id="district"
+        type="radio"
+        name="radio"
+        class="radio-button"
+        value="District"
+      />
+      <label for="district">District</label>
+      <!-- independent school-->
+      <input
+        ngModel
+        id="inde-school"
+        type="radio"
+        name="radio"
+        class="radio-button"
+        value="Independent School"
+      />
+      <label for="inde-school">Independent School</label>
+    </div>
+    <!-- state-->
+    <div class="state-district">
+      <div class="select-title">State*</div>
+      <select ngModel required class="input-select" name="State">
+        <option value="" selected>Select State</option>
+        <option value="Alabama">Alabama</option>
+      </select>
+    </div>
+    <!-- district-->
+    <div class="state-district">
+      <div class="select-title">District*</div>
+      <select ngModel required class="input-select" name="District">
+        <option value="" selected>Select District</option>
+        <option value="alabama-state-district">Alabama State District</option>
+      </select>
+    </div>
+    <!-- Username  -->
+    <div class="un">
+      <input
+        ngModel
+        type="text"
+        class="username"
+        placeholder="Username/Email ID*"
+        name="username"
+        required
+        pattern="(^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$) | (^[A-Za-z0-9]$)+"
+      />
+      <div class="forgot">FORGOT USERNAME?</div>
+    </div>
+    <!-- password-->
+    <div class="pass-wrapper">
+      <div class="pass">
+        <input
+          ngModel
+          type="password"
+          class="password"
+          name="password"
+          placeholder="Password*"
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+        />
+        <div class="arrow">
+          <img src="assets\icons\preview.svg" alt="" />
+        </div>
+      </div>
+      <div class="forgot">FORGOT PASSWORD?</div>
+    </div>
+    <!-- Remember Me Tag -->
+    <div class="remember">
+      <input
+        ngModel
+        type="checkbox"
+        id="remember-me"
+        class="checkbox"
+        value="remember"
+        name="rememberMe"
+      />
+      <span class="checkbox-holder"></span>
+      <label for="remember-me" class="cb-label"> Remember Me </label>
+    </div>
+    <!-- Login Button-->
+    <input type="submit" class="submit-button" value="LOG IN" />
+  </form>
+</div>

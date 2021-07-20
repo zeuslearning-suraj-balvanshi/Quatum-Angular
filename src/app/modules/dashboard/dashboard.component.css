@@ -1,0 +1,190 @@
+/* Wrapper Margin and Padding */
+.dashboard-wrapper > * {
+  margin: 24px;
+}
+
+/* Courses and Classes panel */
+.panel {
+  background: #8ddc97;
+  font-family: "Quicksand";
+  display: flex;
+  height: 64px;
+  border-radius: 3px;
+}
+
+.course-classes {
+  flex: 1;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-classes:first-child {
+  border-bottom: #222222 solid 4px;
+  border-radius: 2px;
+}
+
+.course-classes > * {
+  margin: 3px;
+}
+
+.ctext,
+.cnumber {
+  font-weight: 600;
+}
+
+.ctext {
+  font-size: 16px;
+}
+
+.cnumber {
+  font-size: 24px;
+}
+
+/* Sorting Panel CSS */
+.sort {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: #e0e1e1 solid 1px;
+}
+
+.showing {
+  margin-right: auto;
+  font-size: 14px;
+  color: #686868;
+}
+.sort > label {
+  font-size: 12px;
+  color: #686868;
+  padding-right: 4px;
+}
+
+.sort > select {
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  appearance: none;
+  background: transparent;
+  background-image: url("/assets/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  min-width: 160px;
+  color: #222222;
+  border-bottom: #e0e1e1 solid 1px;
+  margin-right: 32px;
+}
+
+/* Courses Dashboard Grid  CSS */
+.courses-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: auto;
+  gap: 15px;
+  font-family: "Quicksands";
+  justify-items: center;
+}
+
+/* Course CSS Grid Component */
+.course {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  background: white;
+  padding: 20px 20px 5px;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Course IMG and Details Grid */
+.details {
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-gap: 10px;
+  padding-bottom: 5px;
+  font-family: "Quicksand";
+  height: 160px;
+}
+
+.details > .course-img {
+  grid-column: 1;
+  grid-row: 1 / span 6;
+}
+
+/* Course Details only Grid */
+.course-details {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: auto 20px;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.course-details > div {
+  margin: 5px 0;
+}
+
+.course-content {
+  display: flex;
+  font-weight: 600;
+}
+
+.course-name {
+  margin-right: auto;
+  font-size: 14px;
+}
+
+.sub-grade {
+  display: flex;
+  font-size: 11px;
+  color: #777777;
+  grid-row: 2;
+}
+
+.favourite {
+  grid-column: 2;
+  grid-row: 1/-1;
+}
+
+.units {
+  font-size: 12px;
+  grid-row: 3;
+}
+
+.sub-grade > div {
+  margin-right: 5px;
+}
+
+.classes {
+  grid-column: span 1;
+}
+
+.n-classes {
+  border: none;
+  font-family: "Quicksand";
+  font-weight: 600;
+  appearance: none;
+  background-image: url("/assets/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  border-bottom: solid #afafaf 1px;
+  width: 100%;
+}
+
+.student {
+  display: flex;
+  font-size: 11px;
+}
+
+.student > div {
+  margin-right: 7px;
+  color: #777777;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-top: #afafaf solid 1px;
+  padding-top: 10px;
+}

@@ -1,0 +1,241 @@
+<div class="dashboard-wrapper">
+  <!-- classes and courses panel -->
+  <div class="panel">
+    <div class="course-classes">
+      <img src="/assets/icons/courses.svg" alt="courses" />
+      <div class="cnumber">4</div>
+      <div class="ctext">Courses</div>
+    </div>
+    <div class="course-classes">
+      <img src="/assets/icons/classes.svg" alt="classes" />
+      <div class="cnumber">4</div>
+      <div class="ctext">Classes</div>
+    </div>
+  </div>
+  <!-- Sorting Panel -->
+  <div class="sort">
+    <div class="showing">Showing 4 of 4 courses</div>
+    <label for="sorter">Sort By:</label>
+    <select id="sorter" name="course-name">
+      <option value="Course Name">Course Name</option>
+    </select>
+    <img src="/assets/icons/sort.svg" alt="sort-arrow" />
+  </div>
+  <!-- Courses Dashboard -->
+  <!-- Courses grid -->
+  <div class="courses-dashboard">
+    <div class="course" *ngFor="let course of courses">
+      <div class="details">
+        <img class="course-img" src="{{ course.courseImg }}" alt="" />
+        <div class="course-details">
+          <div class="course-content">
+            <div class="course-name">
+              {{ course.courseName }}
+            </div>
+          </div>
+          <div class="favourite">
+            <img src="{{ course.fav }}" alt="Add to favourite" />
+          </div>
+          <div class="sub-grade">
+            <div class="subjetc">{{ course.subject }}</div>
+            <div class="">|</div>
+            <div class="grades">{{ course.grades }}</div>
+          </div>
+          <div class="units" *ngIf="course.units1">
+            <div class="">
+              <strong>{{ course.units1 }}</strong> Units
+              <strong>{{ course.units2 }}</strong> Lessons
+              <strong>{{ course.units3 }}</strong> Topics
+            </div>
+          </div>
+          <div class="classes">
+            <select name="classes" class="n-classes">
+              <option value="mr-frank-b">{{ course.classOption }}</option>
+            </select>
+          </div>
+          <div class="student" *ngIf="course.totalStudents">
+            <div class="total-students">{{ course.totalStudents }}</div>
+            <div class="" *ngIf="course.duration">|</div>
+            <div class="duration">{{ course.duration }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="{{ course.img1 }}" alt="preview" />
+        <img src="{{ course.img2 }}" alt="manage" />
+        <img src="{{ course.img3 }}" alt="grade" />
+        <img src="{{ course.img4 }}" alt="reports" />
+      </div>
+    </div>
+    <!-- grid components/Single Course -->
+  </div>
+</div>
+
+<!-- <div class="course">
+      <div class="details">
+        <img class="course-img" src="/assets/images/imageMask.svg" alt="" />
+        <div class="course-details">
+          <div class="course-content">
+            <div class="course-name">
+              Introduction to Biology: Micro organisms and how the affec..
+            </div>
+          </div>
+          <div class="favourite">
+            <img src="/assets/icons/favourite.svg" alt="Add to favourite" />
+          </div>
+          <div class="sub-grade">
+            <div class="subjetc">Biology</div>
+            <div class="">|</div>
+            <div class="grades">Grade 4 +1</div>
+          </div>
+          <div class="units">
+            <div class="">
+              <strong>5</strong> Units <strong>16</strong> Lessons
+              <strong>22</strong> Topics
+            </div>
+          </div>
+          <div class="classes">
+            <select name="classes" class="n-classes">
+              <option value="mr-frank-b">All Classes</option>
+            </select>
+          </div>
+          <div class="student">
+            <div class="total-students">300 Students</div>
+            <div class="">|</div>
+            <div class="duration">""</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="/assets/icons/preview.svg" alt="preview" />
+        <img src="/assets/icons/manage-course.svg" alt="manage" />
+        <img src="/assets/icons/grade-submissions.svg" alt="grade" />
+        <img src="/assets/icons/reports" alt="reports" />
+      </div>
+    </div>
+    <div class="course">
+      <div class="details">
+        <img class="course-img" src="/assets/images/imageMask.svg" alt="" />
+        <div class="course-details">
+          <div class="course-content">
+            <div class="course-name">
+              Introduction to Biology: Micro organisms and how the affec..
+            </div>
+          </div>
+          <div class="favourite">
+            <img src="/assets/icons/favourite.svg" alt="Add to favourite" />
+          </div>
+          <div class="sub-grade">
+            <div class="subjetc">Biology</div>
+            <div class="">|</div>
+            <div class="grades">Grade 4 +1</div>
+          </div>
+          <div class="units">
+            <div class="">
+              <strong>5</strong> Units <strong>16</strong> Lessons
+              <strong>22</strong> Topics
+            </div>
+          </div>
+          <div class="classes">
+            <select name="classes" class="n-classes">
+              <option value="mr-frank-b">All Classes</option>
+            </select>
+          </div>
+          <div class="student">
+            <div class="total-students">300 Students</div>
+            <div class="">|</div>
+            <div class="duration">""</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="/assets/icons/preview.svg" alt="preview" />
+        <img src="/assets/icons/manage-course.svg" alt="manage" />
+        <img src="/assets/icons/grade-submissions.svg" alt="grade" />
+        <img src="/assets/icons/reports" alt="reports" />
+      </div>
+    </div>
+    <div class="course">
+      <div class="details">
+        <img class="course-img" src="/assets/images/imageMask.svg" alt="" />
+        <div class="course-details">
+          <div class="course-content">
+            <div class="course-name">
+              Introduction to Biology: Micro organisms and how the affec..
+            </div>
+          </div>
+          <div class="favourite">
+            <img src="/assets/icons/favourite.svg" alt="Add to favourite" />
+          </div>
+          <div class="sub-grade">
+            <div class="subjetc">Biology</div>
+            <div class="">|</div>
+            <div class="grades">Grade 4 +1</div>
+          </div>
+          <div class="units">
+            <div class="">
+              <strong>5</strong> Units <strong>16</strong> Lessons
+              <strong>22</strong> Topics
+            </div>
+          </div>
+          <div class="classes">
+            <select name="classes" class="n-classes">
+              <option value="mr-frank-b">All Classes</option>
+            </select>
+          </div>
+          <div class="student">
+            <div class="total-students">300 Students</div>
+            <div class="">|</div>
+            <div class="duration">""</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="/assets/icons/preview.svg" alt="preview" />
+        <img src="/assets/icons/manage-course.svg" alt="manage" />
+        <img src="/assets/icons/grade-submissions.svg" alt="grade" />
+        <img src="/assets/icons/reports" alt="reports" />
+      </div>
+    </div>
+    <div class="course">
+      <div class="details">
+        <img class="course-img" src="/assets/images/imageMask.svg" alt="" />
+        <div class="course-details">
+          <div class="course-content">
+            <div class="course-name">
+              Introduction to Biology: Micro organisms and how the affec..
+            </div>
+          </div>
+          <div class="favourite">
+            <img src="/assets/icons/favourite.svg" alt="Add to favourite" />
+          </div>
+          <div class="sub-grade">
+            <div class="subjetc">Biology</div>
+            <div class="">|</div>
+            <div class="grades">Grade 4 +1</div>
+          </div>
+          <div class="units">
+            <div class="">
+              <strong>5</strong> Units <strong>16</strong> Lessons
+              <strong>22</strong> Topics
+            </div>
+          </div>
+          <div class="classes">
+            <select name="classes" class="n-classes">
+              <option value="mr-frank-b">All Classes</option>
+            </select>
+          </div>
+          <div class="student">
+            <div class="total-students">300 Students</div>
+            <div class="">|</div>
+            <div class="duration">""</div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="/assets/icons/preview.svg" alt="preview" />
+        <img src="/assets/icons/manage-course.svg" alt="manage" />
+        <img src="/assets/icons/grade-submissions.svg" alt="grade" />
+        <img src="/assets/icons/reports" alt="reports" />
+      </div>
+    </div> -->

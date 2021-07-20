@@ -1,0 +1,362 @@
+/* Navbar Menus Wrapper */
+.navbar-wrapper {
+  display: flex;
+  align-content: center;
+}
+
+/* General Padding/Margin/alignment for all components */
+.collapse,
+.badge-menu,
+.ham-menu {
+  display: flex;
+  align-items: center;
+}
+
+.collapse > *,
+.ham-menu > * {
+  margin-right: 18px;
+}
+
+.badge-menu > * {
+  margin-right: 8px;
+}
+
+/* collapse part of menu */
+.collapse > * {
+  display: inherit;
+  padding: 18px 0;
+  color: #3fd28b;
+  flex-shrink: 1;
+}
+.collapse > div:nth-child(1) {
+  color: white;
+  border-bottom: white solid 4px;
+}
+
+/* notification badges */
+.badge {
+  left: 35px;
+  top: -18px;
+  position: relative;
+  background: #2a7ff3;
+  border-radius: 12px;
+  width: 18px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+}
+
+/* Profile pic */
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  border: #3fd28b 3px solid;
+}
+
+/* profile pic hover CSS*/
+.profile-pic:hover {
+  border: white 3px solid;
+}
+
+/* profile badge */
+.badge-profile {
+  left: 42px;
+  top: -28px;
+  background: white;
+  color: black;
+  font-size: 10px;
+  width: 12px;
+}
+
+/* General CSS for each element of alerts and notifications */
+.viewed {
+  background: #ffffff;
+}
+
+.unviewed {
+  background: #ffffee;
+}
+
+.viewed,
+.unviewed {
+  display: grid;
+  grid-template-columns: auto 15px;
+  grid-auto-rows: auto;
+  gap: 8px;
+  padding: 16px;
+  border-top: solid 1px #eeeeee;
+  border-bottom: solid 1px #eeeeee;
+  width: 283px;
+  transform: scale(0);
+  transition: all 1s ease;
+}
+
+.viewed > div,
+.unviewed > div {
+  grid-column: span 2;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* common hover css */
+.notification-badge:hover > svg > path,
+.alert-badge:hover > svg > path {
+  fill: white;
+}
+
+/* STARTS
+Specifics for notifications
+*/
+
+/* notification panel */
+.notifications-panel-wrapper {
+  visibility: collapse;
+  position: fixed;
+  top: 59px;
+  right: 140px;
+  height: 582px;
+  background: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 61, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.notifications-panel {
+  height: 532px;
+  overflow-y: scroll;
+}
+
+.viewed > .notification-name,
+.unviewed > .notification-name {
+  grid-column: span 1;
+}
+
+.viewed > .class-from,
+.viewed > .course-from,
+.unviewed > .class-from,
+.unviewed > .course-from {
+  font-size: 12px;
+}
+
+.class-from > span,
+.course-from > span {
+  color: #6e6e6e;
+}
+
+.viewed > .notification-date,
+.unviewed > .notification-date {
+  text-align: end;
+  color: #6e6e6e;
+  font-size: 12px;
+}
+
+.viewed > .notification-icon,
+.unviewed > .notification-icon {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+}
+
+/* notification hover CSS */
+
+.notification-badge:hover > .notifications-panel-wrapper {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification-badge:hover
+  > .notifications-panel-wrapper
+  > .notifications-panel
+  > .viewed,
+.notification-badge:hover
+  > .notifications-panel-wrapper
+  > .notifications-panel
+  > .unviewed {
+  transform: scale(1);
+}
+
+/* START
+ Specifics for Alert panel 
+ */
+.alerts-panel-wrapper {
+  visibility: collapse;
+  position: fixed;
+  top: 59px;
+  right: 80px;
+  background: white;
+  height: 582px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 61, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.alerts-panel {
+  height: 532px;
+  overflow-y: scroll;
+}
+
+.viewed > .alert-pa,
+.unviewed > .alert-pa,
+.viewed > .alert-name,
+.unviewed > .alert-name {
+  grid-column: span 1;
+}
+
+.viewed > .alert-icon,
+.unviewed > .alert-icon {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+}
+
+.viewed > .alert-date,
+.unviewed > .alert-date {
+  color: #6e6e6e;
+  font-size: 12px;
+  display: flex;
+}
+
+.alert-date > .alert-date-left {
+  margin-left: auto;
+}
+
+.alert-pa > span {
+  color: #6e6e6e;
+}
+
+.viewed > .alert-pa,
+.unviewed > .alert-pa {
+  font-size: 12px;
+}
+
+/* alert hover css */
+.alert-badge:hover > .alerts-panel-wrapper {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-badge:hover > .alerts-panel-wrapper > .alerts-panel > .viewed,
+.alert-badge:hover > .alerts-panel-wrapper > .alerts-panel > .unviewed {
+  transform: scale(1);
+}
+
+/* show all div for notification and alert panel */
+.show-all {
+  bottom: 0;
+  position: fixed;
+  background: white;
+  width: 283px;
+  padding: 15px;
+  border-top: solid 1px #eeeeee;
+  border-bottom: solid 1px #eeeeee;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f7a54;
+}
+
+/* Ham menu CSS */
+.ham-menu {
+  display: none;
+}
+
+.ham-menu-list {
+  visibility: collapse;
+  position: fixed;
+  top: 59px;
+  right: 16px;
+  width: 280px;
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f7a54;
+  box-shadow: 0px 3px 6px rgba(0, 0, 61, 0.3);
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+/* STARTS
+    Ham-menu - expand
+   */
+
+.menu-items > .expand-arrow,
+.expand > .expand-arrow {
+  margin-left: auto;
+}
+
+.menu-items,
+.expand {
+  display: flex;
+  align-items: center;
+}
+.menu-items:hover + .expand {
+  visibility: visible;
+  background: #f3f3f3;
+  height: auto;
+  width: auto;
+  padding: 15px 16px;
+  padding-left: 50px;
+  opacity: 1;
+}
+
+.menu-items:hover {
+  background: #f3f3f3;
+}
+
+.ham-menu-list > .menu-items {
+  padding: 15px 16px;
+  transform: scale(1);
+  transition: all 1s ease;
+}
+
+.expand {
+  visibility: collapse;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: all 1s ease;
+}
+
+/* ham menu hover CSS  */
+.ham-menu:hover > svg {
+  fill: white;
+}
+
+.ham-menu:hover > .mobile-menu > div {
+  background-color: white;
+}
+
+.ham-menu:hover > .ham-menu-list {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.menu-items:hover + .expand {
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .collapse {
+    display: none;
+  }
+  .ham-menu {
+    display: inherit;
+  }
+  .notifications-panel-wrapper {
+    right: 180;
+  }
+  .alerts-panel-wrapper {
+    right: 120;
+  }
+}

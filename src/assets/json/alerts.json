@@ -1,0 +1,47 @@
+[
+  {
+    "viewed": "viewed",
+    "pa": "Wilson Kumar",
+    "alertIcon": "/assets/icons/checkbox-unchecked.svg",
+    "alertName": "No classes will be held on 21st Nov",
+    "courseFrom": "",
+    "attachments": "2 files are attached",
+    "alertDate": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "viewed": "unviewed",
+    "pa": "Samson White",
+    "alertIcon": "/assets/icons/checkbox-unchecked.svg",
+    "alertName": "Guest lecture on Geometry on 20th September",
+    "courseFrom": "",
+    "attachments": "2 files are attached",
+    "alertDate": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "viewed": "viewed",
+    "pa": "Wilson Kumar",
+    "alertIcon": "/assets/icons/checkbox-unchecked.svg",
+    "alertName": "Additional course materials available on request",
+    "courseFrom": "Course: Mathematics 101",
+    "attachments": "",
+    "alertDate": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "viewed": "unviewed",
+    "pa": "Wilson Kumar",
+    "alertIcon": "/assets/icons/checkbox-unchecked.svg",
+    "alertName": "No classes will be held on 25th Dec",
+    "courseFrom": "",
+    "attachments": "2 files are attached",
+    "alertDate": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "viewed": "unviewed",
+    "pa": "Wilson Kumar",
+    "alertIcon": "/assets/icons/checkbox-unchecked.svg",
+    "alertName": "Additional course materials available on request",
+    "courseFrom": "Course: Mathematics 101",
+    "attachments": "",
+    "alertDate": "15-Sep-2018 at 07:21 pm"
+  }
+]

@@ -1,0 +1,37 @@
+/* Header CSS */
+header {
+  background: #25313f;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 25px;
+}
+
+/* Footer CSS */
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  font-size: 14px;
+  color: #1f7a54;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: #e0e1e1;
+  color: #616161;
+  font-size: 12px;
+}
+
+.contact > *,
+.footer > * {
+  padding: 0 5px;
+}

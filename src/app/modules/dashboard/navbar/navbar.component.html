@@ -1,0 +1,235 @@
+<div class="navbar-wrapper">
+  <div class="collapse">
+    <div>DASHBOARD</div>
+    <div>CONTENT</div>
+    <div>USERS</div>
+    <div>REPORT</div>
+    <div>ADMIN</div>
+  </div>
+  <div class="badge-menu">
+    <div class="notification-badge">
+      <span class="badge notifications-badge">2</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          id="Path_3675"
+          data-name="Path 3675"
+          d="M7.58,4.08,6.15,2.65A10.425,10.425,0,0,0,2.03,10.5h2A8.446,8.446,0,0,1,7.58,4.08ZM19.97,10.5h2a10.489,10.489,0,0,0-4.12-7.85L16.43,4.08A8.5,8.5,0,0,1,19.97,10.5ZM18,11c0-3.07-1.64-5.64-4.5-6.32V4a1.5,1.5,0,0,0-3,0v.68C7.63,5.36,6,7.92,6,11v5L4,18v1H20V18l-2-2ZM12,22a1.752,1.752,0,0,0,.4-.04,2.029,2.029,0,0,0,1.44-1.18,2.008,2.008,0,0,0,.15-.78h-4A2.014,2.014,0,0,0,12,22Z"
+          fill="#3fd28b"
+        />
+      </svg>
+      <div class="notifications-panel-wrapper">
+        <div class="notifications-panel">
+          <div
+            class="{{ notification.viewed }}"
+            *ngFor="let notification of notifications"
+          >
+            <div class="notification-name">
+              {{ notification.notificationName }}
+            </div>
+            <img src="{{ notification.notificationIcon }}" alt="" />
+            <div *ngIf="notification.courseFrom" class="course-from">
+              <span>Course:</span> {{ notification.courseFrom }}
+            </div>
+            <div *ngIf="notification.classFrom" class="class-from">
+              <span>Class:</span> {{ notification.classFrom }}
+            </div>
+            <div class="notification-date">
+              {{ notification.notificationDate }}
+            </div>
+          </div>
+        </div>
+        <div class="show-all">SHOW ALL</div>
+      </div>
+    </div>
+    <div class="alert-badge">
+      <span class="badge alerts-badge">1</span>
+      <svg
+        class="alerts"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          id="Forma_1"
+          data-name="Forma 1"
+          d="M1076.936,181.974a1.242,1.242,0,0,1-.92-.778l-2.513-6.7h-.379a.625.625,0,0,1-.625-.626v-.625h-1.876a.625.625,0,0,1-.625-.625v-3.75a.625.625,0,0,1,.625-.625h1.876v-.626a.625.625,0,0,1,.625-.625h6.228c.217-.01.431-.044.647-.064v7.628c-.214-.021-.427-.054-.642-.064h-1.66l2.1,4.2a1.247,1.247,0,0,1-.229,1.446l-1.5,1.489a1.215,1.215,0,0,1-.879.37A1.25,1.25,0,0,1,1076.936,181.974Zm12.183-2.53c-.019-.009-.033-.025-.052-.036a.6.6,0,0,1-.155-.121c-.006-.007-.015-.01-.021-.016a13.146,13.146,0,0,0-7.642-4.527v-7.988a13.148,13.148,0,0,0,7.642-4.528c.005-.005.013-.006.018-.012a.621.621,0,0,1,.274-.177.461.461,0,0,1,.07-.014.561.561,0,0,1,.122-.025.627.627,0,0,1,.175.035.04.04,0,0,0,.018,0,.042.042,0,0,1,.018,0s.006.006.01.007a.62.62,0,0,1,.262.2.414.414,0,0,1,.04.059.6.6,0,0,1,.1.322v16.249a.6.6,0,0,1-.1.322c-.014.022-.025.039-.04.059a.6.6,0,0,1-.262.2s-.006.006-.01.008a.628.628,0,0,1-.466-.019Z"
+          transform="translate(-1070 -162)"
+          fill="#3fd28b"
+        />
+      </svg>
+      <div class="alerts-panel-wrapper">
+        <div class="alerts-panel">
+          <div class="{{ alert.viewed }}" *ngFor="let alert of alerts">
+            <div class="alert-pa"><span>PA:</span> {{ alert.pa }}</div>
+            <img src="{{ alert.alertIcon }}" alt="" />
+            <div class="alert-name">{{ alert.alertName }}</div>
+            <div class="course-from">
+              <span>Course: {{ alert.courseFrom }}</span>
+            </div>
+            <div class="alert-date">
+              {{ alert.attachments }}
+              <span class="alert-date-left">{{ alert.alertDate }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="show-all">
+          <span>SHOW ALL</span> &ensp; | &ensp;
+          <span>CREATE NEW</span>
+        </div>
+      </div>
+    </div>
+    <div class="profile-menu">
+      <span class="badge badge-profile">T</span>
+      <img
+        class="profile-pic"
+        src="/assets/icons/IMG_20210626_231412.jpg"
+        alt="Profile"
+      />
+    </div>
+  </div>
+  <div class="ham-menu">
+    <svg fill="#8DDC97" viewBox="0 0 24 24" width="24px" height="24px">
+      <path
+        d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"
+      />
+    </svg>
+    <span class="ham-menu-list">
+      <div class="menu-items">
+        <span>DASHBOARD</span>
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="expand">
+        <span>CONTENT</span>
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="menu-items">
+        CONTENT
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="expand">
+        <span>CONTENT</span>
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="menu-items">
+        USERS
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="expand">
+        <span>CONTENT</span>
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="menu-items">
+        REPORT
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="expand">
+        <span>CONTENT</span>
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="menu-items">
+        ADMIN
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+      <div class="expand">
+        <span>CONTENT</span>
+        <span class="expand-arrow"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 10l5 5 5-5z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg
+        ></span>
+      </div>
+    </span>
+  </div>
+</div>
